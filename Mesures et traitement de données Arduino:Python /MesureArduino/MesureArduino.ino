@@ -3,9 +3,9 @@ char serialData;
 int time = 0;
 
 void setup() {
-	Serial.begin(9600);
-  pinMode(LedBlue, OUTPUT);
-  digitalWrite(LedBlue, LOW);
+  	Serial.begin(9600);
+  	pinMode(LedBlue, OUTPUT);
+  	digitalWrite(LedBlue, LOW);
 }
 
 void loop() {
@@ -13,17 +13,17 @@ void loop() {
 	delay(1000);
 	time += 1;
 	Serial.flush();
-  led_on();
+  	led_on();
 }
 
 void led_on() {
-    serialData = Serial.read();
+	serialData = Serial.read();
     
-    if (serialData == '1') {
-      digitalWrite(LedBlue, HIGH);
-    }
-    else if (serialData == '0') {
-      digitalWrite(LedBlue, LOW);
-    }
+  	if (serialData == '1') {
+      		digitalWrite(LedBlue, HIGH);
+    	}
+    	else if (serialData == '0') {
+      		digitalWrite(LedBlue, LOW);
+    	}
 }
 
