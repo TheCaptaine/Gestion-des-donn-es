@@ -21,7 +21,7 @@ def commencer():
 
 	arduino.write(b'1')
 	ready = 1
-	message2["text"]= "Mesure prise"
+	message2["text"]= "TERMINER"
 	return
 
 def afficher():
