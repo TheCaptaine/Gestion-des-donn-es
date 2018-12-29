@@ -10,7 +10,6 @@ ready = 0
 def commencer():
 	rawdata= []
 	global ready
-	print(rawdata)
 	for k in range(0, 10, 1):
 		print("Chargement {}".format("*"*k))
 		rawdata.append(arduino.readline()[:-2])
